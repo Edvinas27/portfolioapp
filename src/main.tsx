@@ -11,9 +11,10 @@ const root = createRoot(document.getElementById('root')!);
 root.render(
   <Router>
     <Routes>
-      <Route path="/" element={<Console></Console>}/>
+      <Route path="/" element={<Console/>}/>
       <Route path="/error-screen" element={<ErrorScreen/>}/>
       <Route path="/bios-screen" element={<BiosScreen/>}/>
+      <Route path="/main-screen" element={<Console/>}/>
     </Routes>
   </Router>
 )
