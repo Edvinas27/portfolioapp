@@ -28,9 +28,9 @@ function ErrorScreen() {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       navigate("/bios-screen")
-    }, 7000)
+    }, 2500)
     if(containerRef.current)
     {
       requestAnimationFrame(() => {
@@ -39,6 +39,9 @@ function ErrorScreen() {
           behavior: "instant",
         })
       })
+    }
+    return () => {
+      clearTimeout(timeout);
     }
   }, [navigate, typeWriterText])
 
